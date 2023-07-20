@@ -19,10 +19,16 @@ function DisplayImg() {
   </div>
 }
 
+let count = 0;
+
+function Counter() {
+  return (console.log(count++ + ' Number of clicks'));
+}
+
 
 function App() {
   return (
-    <div style={{ backgroundColor: 'orange', width: '100vw', height: '100vh' }}>
+    <div style={{ backgroundColor: 'orange', width: '100vw', minHeight: '100vh' }}>
       <br></br>
       <div>
         {console.log('Hello from a parent Component')}
@@ -32,7 +38,13 @@ function App() {
 
       <Name />
       <DisplayImg />
-    </div>
+
+      <br></br>
+      <div style={(centerStyle)}>
+        <button onClick={Counter} className="btn">
+          Click Me!
+        </button>
+      </div>    </div>
 
     // <div className="App">
     //   <header className="App-header">
